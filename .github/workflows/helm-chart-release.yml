@@ -37,8 +37,10 @@ jobs:
         env:
           GPG_KEYRING_BASE64: "${{ secrets.GPG_KEYRING_BASE64 }}"
           GPG_PASSPHRASE: ${{ secrets.PASSPHRASE }}
-          
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.2.1
+        with:
+          sign: true
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
