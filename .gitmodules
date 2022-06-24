@@ -1,0 +1,4 @@
+[submodule "charts/boundary"]
+	path = charts/boundary
+	url = https://github.com/ugns/boundary-chart
+	branch = main
